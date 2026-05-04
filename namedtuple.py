@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import namedtuple
+n = int(input())
+fs = input().split()
+score = namedtuple('score',fs)
+total = 0
+for _ in range(n):
+    record = score(*input().split())
+    total += float(record.MARKS)
+
+print((total/n)) 
