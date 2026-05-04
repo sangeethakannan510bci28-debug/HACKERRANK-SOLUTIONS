@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+N = int(input())
+
+l = []
+for i in range(N):
+    s = input()
+    l.append(s)
+
+for j in l:
+    if re.fullmatch(r"^(?!.*(\d)(?:-?\1){3})([456][0-9]{3})-?([0-9]{4})-?([0-9]{4})-?([0-9]{4})",j):
+        print('Valid')
+    else:
+        print("Invalid")
