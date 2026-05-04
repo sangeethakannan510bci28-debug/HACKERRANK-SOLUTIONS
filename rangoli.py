@@ -1,0 +1,14 @@
+def print_rangoli(size):
+    # your code goes here
+    az = [chr(i) for i in range(97,97 + size)] #a-e
+    width = size*4 - 3
+    for i in range(size): #0 to size - 1
+        l_part = '-'.join(sorted(az[size-i-1: size],reverse=True))
+        r_part = '-'.join(az[size-i-1: size])[1:]
+        print((l_part + r_part).center(width,'-'))
+    
+    for i in range(1,size): #1 to size - 1
+        l_part = '-'.join(sorted(az[i: size],reverse=True))
+        r_part = '-'.join(az[i: size])[1:]
+        print((l_part + r_part).center(width,'-'))
+#        print(l_part)
